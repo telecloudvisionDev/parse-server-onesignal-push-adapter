@@ -199,6 +199,8 @@ headings is omitted
     if(data['thumbnail'])
     {
       post['big_picture'] = data['thumbnail'];
+      post['large_icon'] = data['thumbnail'];
+      
     }
 
     post['data'] = data;
