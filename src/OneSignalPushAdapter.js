@@ -90,7 +90,7 @@ export class OneSignalPushAdapter {
 
     if(data['thumbnail'])
     {
-      post['ios_attachments'] = data['thumbnail'];
+      post['ios_attachments'] = { "id1" : data['thumbnail']};
     }
 
     if(data['alert']) {
