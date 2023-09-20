@@ -88,6 +88,11 @@ export class OneSignalPushAdapter {
       //delete data['content-available'];
     }
 
+    if(data['thumbnail'])
+    {
+      post['ios_attachments'] = data['thumbnail'];
+    }
+
     if(data['alert']) {
       post['contents'] = {en: data['alert']};
       //delete data['alert'];
@@ -106,6 +111,7 @@ export class OneSignalPushAdapter {
       delete post['ios_badgeType']; 
       delete post['ios_badgeCount']; 
       delete post['ios_sound']; 
+      delete post['ios_attachments']; 
 
       /*
       content_available : true
@@ -189,6 +195,12 @@ headings is omitted
       //delete data['background_data'];
       //delete data['android_background_data'];
     }
+
+    if(data['thumbnail'])
+    {
+      post['big_picture'] = data['thumbnail'];
+    }
+
     post['data'] = data;
 
     let promise = new Parse.Promise();
