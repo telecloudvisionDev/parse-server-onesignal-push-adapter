@@ -180,7 +180,7 @@ headings is omitted
     }
     else
     {
-      post['contents'] = {en: 'background'};
+      //post['contents'] = {en: 'background'};
     } 
 
     if(data['title']) {
@@ -198,8 +198,8 @@ headings is omitted
 
     if(data['thumbnail'])
     {
-      //post['big_picture'] = data['thumbnail'];
-      //post['large_icon'] = data['thumbnail'];
+      post['big_picture'] = data['thumbnail'];
+      post['large_icon'] = data['thumbnail'];
       
     }
 
