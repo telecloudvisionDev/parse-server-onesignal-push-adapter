@@ -203,6 +203,12 @@ headings is omitted
       
     }
 
+    if(data['videoCallRelated'] || data ['tokSessionId'])
+    {
+      post['android_background_data'] = true;
+      delete post['contents'];
+    }
+
     post['data'] = data;
 
     let promise = new Parse.Promise();
